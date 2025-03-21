@@ -23,3 +23,15 @@ if (obj1Keys.length !== obj2Keys.length) {
     console.log("Objects are same");
   }
 }
+
+//Modified Approach
+
+let object1 = { name: "Person 1", age: 5 };
+let object2 = { age: 5, name: "Person 1" };
+
+let sortedObj1 = Object.entries(object1).sort()
+let sortedObj2 = Object.entries(object2).sort()
+
+let areSame = JSON.stringify(sortedObj1) === JSON.stringify(sortedObj2)
+
+console.log(areSame ? "Objects are same" : "Objects are not same");
